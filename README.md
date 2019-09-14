@@ -1,5 +1,7 @@
 # GitHub Actions for Rust language
 
+[![Gitter](https://badges.gitter.im/actions-rs/community.svg)](https://gitter.im/actions-rs/community)
+
 Repositories in [this organization](https://github.com/actions-rs) are [GitHub Actions](https://github.com/features/actions), which can be used to do the full CI circle for Rust projects.
 
 All Actions here are using the same defaults and support almost all options, which `cargo` subcommands has.
