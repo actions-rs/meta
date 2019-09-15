@@ -24,11 +24,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: actions-rs/toolchain@master
+      - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
           override: true
-      - uses: actions-rs/cargo@master
+      - uses: actions-rs/cargo@v1
         with:
           command: build
           args: --release
@@ -38,11 +38,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: actions-rs/toolchain@master
+      - uses: actions-rs/toolchain@v1
         with:
           toolchain: nightly
           override: true
-      - uses: actions-rs/cargo@master
+      - uses: actions-rs/cargo@v1
         with:
           command: test
           args: --all-targets
@@ -52,11 +52,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: actions-rs/toolchain@master
+      - uses: actions-rs/toolchain@v1
         with:
           toolchain: 1.31.0
           override: true
-      - uses: actions-rs/cargo@master
+      - uses: actions-rs/cargo@v1
         with:
           command: check
           args: --all-targets
