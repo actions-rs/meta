@@ -1,15 +1,17 @@
-## Quickstart + MSRV CI workflow
+# Quickstart + MSRV CI workflow
 
 This workflow is doing almost the same what [Quickstart workflow](../quickstart.md) does,
 except all jobs are invoked twice: for latest stable Rust and
 for MSRV (Minimal Supported Rust Version) toolchain.
 
-### When it can be used?
+## When it can be used?
 
 1. You have a simple Rust project
 2. It can be compiled with the `stable` Rust compiler
 3. You also have a policy about minimal supported Rust version (ex. "*this crate can be compiled with Rust 1.31.0 and higher*")
     and you want to guarantee that
+
+## Workflow
 
 ```yaml
 on: [push, pull_request]
@@ -94,7 +96,7 @@ jobs:
           args: -- -D warnings
 ```
 
-### Can I tune it?
+## Can I tune it?
 
 Sure!
 

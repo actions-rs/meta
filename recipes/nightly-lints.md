@@ -1,4 +1,4 @@
-## Nightly lints CI workflow
+# Nightly lints CI workflow
 
 This workflow installs latest nightly Rust version
 and invokes these commands in parallel:
@@ -8,12 +8,14 @@ and invokes these commands in parallel:
  * [`cargo fmt`](https://github.com/rust-lang/rustfmt)
  * [`cargo clippy`](https://github.com/rust-lang/rust-clippy)
 
-### When it can be used?
+## When it can be used?
 
 1. You are living on an edge
 2. You prefer to use `nightly` versions of `clippy` and `rustfmt`,
 as they have more options available
 3. You hate when today's `nightly` is missing `clippy` and your CI build is broken now
+
+## Workflow
 
 ```yaml
 on: [push, pull_request]
@@ -60,7 +62,7 @@ jobs:
           args: --all -- --check
 ```
 
-### Alright, what's going on here?
+## Alright, what's going on here?
 
 [`actions-rs/components-nightly`](https://github.com/actions-rs/components-nightly) Action
 helps you by searching for a latest `nightly` build with the `component` requested.
@@ -69,7 +71,7 @@ Found toolchain name is used later by the [`actions-rs/toolchain`](https://githu
 so instead of breaking your CI build, you are just falling back to the most recent `nightly` build
 where `clippy` is available and can be invoked.
 
-### Can I tune it?
+## Can I tune it?
 
 Sure!
 

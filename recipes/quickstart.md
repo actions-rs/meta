@@ -1,4 +1,4 @@
-## Quickstart CI workflow
+# Quickstart CI workflow
 
 This workflow installs latest stable Rust version
 and invokes these commands in parallel:
@@ -8,7 +8,7 @@ and invokes these commands in parallel:
  * [`cargo fmt`](https://github.com/rust-lang/rustfmt)
  * [`cargo clippy`](https://github.com/rust-lang/rust-clippy)
 
-### When it can be used?
+## When it can be used?
 
 1. You have a simple Rust project
 2. There is no OS-specific code
@@ -78,7 +78,7 @@ jobs:
           args: -- -D warnings
 ```
 
-### Can I tune it?
+## Can I tune it?
 
 Sure!
 
