@@ -1,63 +1,33 @@
 # GitHub Actions for Rust language
 
+![CC0 licensed](https://img.shields.io/github/license/actions-rs/meta)
 [![Gitter](https://badges.gitter.im/actions-rs/community.svg)](https://gitter.im/actions-rs/community)
 
 Repositories in [this organization](https://github.com/actions-rs) are [GitHub Actions](https://github.com/features/actions), which can be used to do the full CI circle for Rust projects.
 
-All Actions here are using the same defaults and support almost all options, which `cargo` subcommands has.
+## Recipes
 
-## Basic workflow
+### Quickstart ⚡
 
-This workflow example creates three jobs:
- 1. Run `cargo build` on stable
- 2. Run `cargo test` on nightly
- 3. Install specific Rust version and run check it too
+[Quickstart](./quickstart.md) recipe can be useful
+if you are not familiar with GitHub Actions, never used CI thingies before
+or just want to copy-n-paste some scripts into your project for an instant result.
 
-```yaml
-on: [push, pull_request]
+### MSRV (Minimal Supported Rust Version) 🔒
 
-name: commit checks
+[MSRV](./msrv.md) recipe does almost the same what "[Quickstart](#quickstart)" do,
+but also helps to guarantee the MSRV policy if you have any.
 
-jobs:
-  build:
-    name: Stable build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: actions-rs/toolchain@v1
-        with:
-          toolchain: stable
-          override: true
-      - uses: actions-rs/cargo@v1
-        with:
-          command: build
-          args: --release
+### Nightly clippy and rustfmt 📎
 
-  test:
-    name: Nightly test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: actions-rs/toolchain@v1
-        with:
-          toolchain: nightly
-          override: true
-      - uses: actions-rs/cargo@v1
-        with:
-          command: test
-          args: --all-targets
+Ever had this problem when your CI build is broken,
+because today's `nightly` is missing `clippy` or `rustfmt`?\
+Yeah, I know, everyone hates that.
 
-  min_version:
-    name: Minimal supported Rust version
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: actions-rs/toolchain@v1
-        with:
-          toolchain: 1.31.0
-          override: true
-      - uses: actions-rs/cargo@v1
-        with:
-          command: check
-          args: --all-targets
-```
+[Nightly lints](./nightly-lints.md) recipe solves this problem
+by falling back to the most recent `nightly` build with the `clippy` available.
+No more broken builds for you!
+
+## License
+
+All recipes in this repository are published with the [CC0](./LICENSE) license.
