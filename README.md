@@ -7,6 +7,9 @@ Repositories in [this organization](https://github.com/actions-rs) are [GitHub A
 
 ## Recipes
 
+See the [@actions-rs/example](https://github.com/actions-rs/example) repository
+with the live workflows described here.
+
 ### Quickstart ⚡
 
 [Quickstart](./recipes/quickstart.md) recipe can be useful

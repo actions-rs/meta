@@ -3,8 +3,6 @@
 This workflow installs latest nightly Rust version
 and invokes these commands in parallel:
 
- * `cargo check`
- * `cargo test`
  * [`cargo fmt`](https://github.com/rust-lang/rustfmt)
  * [`cargo clippy`](https://github.com/rust-lang/rust-clippy)
 
@@ -12,7 +10,7 @@ and invokes these commands in parallel:
 
 1. You are living on an edge
 2. You prefer to use `nightly` versions of `clippy` and `rustfmt`,
-as they have more options available
+as they has more options available
 3. You hate when today's `nightly` is missing `clippy` and your CI build is broken now
 
 ## Workflow
@@ -27,7 +25,7 @@ jobs:
     name: Clippy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v1
       - id: component
         uses: actions-rs/components-nightly@v1
         with:
@@ -43,10 +41,10 @@ jobs:
           args: -- -D warnings
 
   rustfmt:
-    name: Fmt
+    name: Format
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v1
       - id: component
         uses: actions-rs/components-nightly@v1
         with:

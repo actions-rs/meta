@@ -28,7 +28,7 @@ jobs:
           - stable
           - 1.31.0
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v1
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: ${{ matrix.rust }}
@@ -46,7 +46,7 @@ jobs:
           - stable
           - 1.31.0
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v1
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: ${{ matrix.rust }}
@@ -64,7 +64,7 @@ jobs:
           - stable
           - 1.31.0
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v1
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: ${{ matrix.rust }}
@@ -84,7 +84,7 @@ jobs:
           - stable
           - 1.31.0
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v1
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: ${{ matrix.rust }}
