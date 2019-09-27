@@ -35,6 +35,7 @@ jobs:
         with:
             toolchain: ${{ steps.component.outputs.toolchain }}
             override: true
+      - run: rustup component add clippy
       - uses: actions-rs/cargo@v1
         with:
           command: clippy
@@ -54,6 +55,7 @@ jobs:
         with:
             toolchain: ${{ steps.component.outputs.toolchain }}
             override: true
+      - run: rustup component add rustfmt
       - uses: actions-rs/cargo@v1
         with:
           command: fmt
