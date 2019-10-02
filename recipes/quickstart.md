@@ -71,7 +71,6 @@ jobs:
         with:
           toolchain: stable
           override: true
-      - run: rustup component add clippy
       - uses: actions-rs/cargo@v1
         with:
           command: clippy
