@@ -33,7 +33,7 @@ no more broken builds for you!
 
 ### Stable + beta + nightly + MSRV
 
-[Matrix](./matrix.md) recipe combines three previous recipes together
+[Matrix](./recipes/matrix.md) recipe combines three previous recipes together
 in order to make an ultimate quickstart workflow.
 
 ### Perform security audit for your dependencies 🛡️
