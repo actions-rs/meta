@@ -27,9 +27,14 @@ Ever had this problem when your CI build is broken,
 because today's `nightly` is missing `clippy` or `rustfmt`?\
 Yeah, I know, everyone hates that.
 
-[Nightly lints](./recipes/nightly-lints.md) recipe solves this problem
-by falling back to the most recent `nightly` build with the `clippy` available.
-No more broken builds for you!
+[Nightly lints](./recipes/nightly-lints.md) recipe is utilizing `rustup` ability
+to find the most recent `nightly` toolchain with the components requested;
+no more broken builds for you!
+
+### Perform security audit for your dependencies 🛡️
+
+[Security Audit](./recipes/security-audit.md) recipe is using [RustSec](https://rustsec.org/)
+advisories database to audit crate for security vulnerabilities.
 
 ## License
 
