@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v1
       - uses: actions-rs/audit-check@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}```
+          token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 This Action will be executed periodically at midnight of each day
