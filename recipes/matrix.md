@@ -33,7 +33,7 @@ jobs:
           - 1.31.0  # MSRV
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - uses: actions-rs/toolchain@v1
         with:
