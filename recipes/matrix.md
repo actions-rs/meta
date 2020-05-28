@@ -45,10 +45,12 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           command: build
+          args: --workspace
 
       - uses: actions-rs/cargo@v1
         with:
           command: test
+          args: --workspace
 
       - uses: actions-rs/cargo@v1
         with:
@@ -58,7 +60,7 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           command: clippy
-          args: -- -D warnings
+          args: --workspace --all-targets -- -D warnings
 ```
 
 ## Can I tune it?
