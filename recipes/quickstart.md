@@ -34,6 +34,7 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           command: check
+          args: --workspace --all-targets
 
   test:
     name: Test Suite
@@ -48,6 +49,7 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           command: test
+          args: --workspace
 
   fmt:
     name: Rustfmt
@@ -79,7 +81,7 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           command: clippy
-          args: -- -D warnings
+          args: --workspace --all-targets -- -D warnings
 ```
 
 ## Can I tune it?
