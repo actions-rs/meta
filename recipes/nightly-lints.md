@@ -10,7 +10,7 @@ and invokes these commands in parallel:
 
 1. You are living on an edge
 2. You prefer to use `nightly` versions of `clippy` and `rustfmt`,
-as they has more options available
+as they have more options available
 
 ## Workflow
 
